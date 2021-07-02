@@ -6,7 +6,7 @@ const middlewares = require('./middlewares');
 
 const server = express();
 
-server.use(bodyparser.json());
+server.use(bodyparser);
 server.use(compression());
 
 server.get('/getById/:id', middlewares.validateId, (req, res)=> {
